@@ -1,0 +1,175 @@
+********************************************************************************
+*                                                                              *
+*        Publication to reference in reporting results:                        *
+*        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                        *
+*                                                                              *
+*        Rost, Burkhard; Sander, Chris: Prediction of protein structure        *
+*           at better than 70% accuracy. J. Mol. Biol., 1993, 232, 584-599.    *
+*        Rost, Burkhard; Sander, Chris: Combining evolutionary information     *
+*           and neural networks to predict protein secondary structure.        *
+*           Proteins, 1994, 19, 55-72.                                         *
+*                                                                              *
+********************************************************************************
+*                                                                              *
+*        Some statistics:                                                      *
+*        ~~~~~~~~~~~~~~~~                                                      *
+*                                                                              *
+*        Percentage of amino acids:                                            *
+*                                                                              *
+*        +--------------+--------+--------+--------+--------+--------+
+*        | AA:          |    A   |    G   |    S   |    V   |    N   |
+*        | % of AA:     |   14.9 |   13.0 |   12.6 |    9.3 |    8.2 |
+*        +--------------+--------+--------+--------+--------+--------+
+*        | AA:          |    L   |    T   |    P   |    Q   |    I   |
+*        | % of AA:     |    7.1 |    6.3 |    4.8 |    3.7 |    3.3 |
+*        +--------------+--------+--------+--------+--------+--------+
+*        | AA:          |    R   |    Y   |    H   |    K   |    E   |
+*        | % of AA:     |    3.0 |    2.6 |    2.6 |    1.9 |    1.9 |
+*        +--------------+--------+--------+--------+--------+--------+
+*        | AA:          |    D   |    W   |    M   |    F   |
+*        | % of AA:     |    1.9 |    1.1 |    1.1 |    0.7 |
+*        +--------------+--------+--------+--------+--------+
+*                                                                              *
+*        Percentage of secondary structure predicted:                          *
+*                                                                              *
+*        +--------------+--------+--------+--------+
+*        | SecStr:      |    H   |    E   |    L   |
+*        | % Predicted: |   23.0 |   24.5 |   52.4 |
+*        +--------------+--------+--------+--------+
+*                                                                              *
+*        According to the following classes:                                   *
+*        all-alpha:   %H>45 and %E< 5; all-beta : %H<5 and %E>45               *
+*        alpha-beta : %H>30 and %E>20; mixed:    rest,                         *
+*        this means that the predicted class is:           mixed class         *
+*                                                                              *
+********************************************************************************
+*                                                                              *
+*                                                                              *
+********************************************************************************
+*                                                                              *
+*                                                                              *
+*   PHD output for your protein:                                               *
+*   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                               *
+*                                                                              *
+*                                                                              *
+*   Wed Jul  2 13:33:34 2014                                                   *
+*                                                                              *
+*   Jury on:       10    different architectures (version   5.94_317 ).        *
+*   Note: differently trained architectures, i.e., different versions can      *
+*        result in different predictions.                                      *
+*                                                                              *
+*                                                                              *
+********************************************************************************
+*                                                                              *
+*                                                                              *
+*                                                                              *
+*   About the protein:                                                         *
+*   ------------------                                                         *
+*                                                                              *
+*                                                                              *
+*        HEADER                                                                *
+*        COMPND                                                                *
+*        SOURCE                                                                *
+*        AUTHOR                                                                *
+*        SEQLENGTH   269                                                       *
+*        NCHAIN        1 chain(s) in savinase data set                         *
+*        NALIGN       22                                                       *
+*                   (=number of aligned sequences in HSSP file)                *
+*                                                                              *
+*                                                                              *
+********************************************************************************
+*                                                                              *
+*                                                                              *
+*                                                                              *
+*   Abbreviations:                                                             *
+*   --------------                                                             *
+*                                                                              *
+*   secondary structure : H=helical trans-membrane regions, L=rest (loop)      *
+*                                                                              *
+*                     AA: amino acid sequence                                  *
+*                    PHD: Profile network prediction HeiDelberg                *
+*                    Rel: Reliability index of prediction (0-9)                *
+*                                                                              *
+*   detail:                                                                    *
+*                    prH: 'probability' for assigning helix                    *
+*                    prL: 'probability' for assigning loop                     *
+*                   note: the 'probabilites' are scaled to the interval 0-9,   *
+*                         i.e. prH=5 means, that the signal at the first       *
+*                         output node is 0.5-0.6.                              *
+*                                                                              *
+*   subset:                                                                    *
+*                    SUB: a subset of the prediction, for all residues with    *
+*                         an expected accuracy > 95% (see  tables in header)   *
+*                 note 1: for this subset the following symbols are used:      *
+*                      L: is loop (for which above " " is used)                *
+*                    ".": means that no prediction is made for this residue,   *
+*                         as the reliability is Rel < 5                        *
+*                                                                              *
+*                                                                              *
+********************************************************************************
+*                                                                              *
+*                                                                              *
+*        protein:       savinas        length      269                         *
+*                                                                              *
+
+              ....,....1....,....2....,....3....,....4....,....5....,....6
+         AA  |AQSVPWGISRVQAPAAHNRGLTGSGVKVAVLDTGISTHPDLNIRGGASFVPGEPSTQDGN|
+         PHD |              HHHH       EEEEEEE                            |
+         Rel |999866554344424562389999358999838965774132027884134789877888|
+ detail:
+         prH-|000002222100246675310000000000000012123455431000000000111111
+         prE-|000010011222100000000000368999851000000000100002432100000000
+         prL-|989877666566653223588988621000138977776534458886566888888888
+ subset: SUB |LLLLLLLL.......HH..LLLLL.EEEEEE.LLLLLL......LLL....LLLLLLLLL|
+
+
+              ....,....7....,....8....,....9....,....10...,....11...,....1
+         AA  |GHGTHVAGTIAALNNSIGVLGVAPSAELYAVKVLGASGSGSVSSIAQGLEWAGNNGMHVA|
+         PHD |  HHHHHEEEEEE    EEEEE    EEEEEEEE       HHHHHHHHHHHHH    EE|
+         Rel |622345503334217984788535426899999827998555899999999996295089|
+ detail:
+         prH-|145566642221000000000000100000000000000127889989899987400000
+         prE-|000011145556541016788732237899999831000100000000000000002489
+         prL-|753321111222348983111267651000000157988662000000000001587410
+ subset: SUB |L....HH.......LLL.EEEE.L..EEEEEEEE.LLLLLLHHHHHHHHHHHHH.LL.EE|
+
+
+              2...,....13...,....14...,....15...,....16...,....17...,....1
+         AA  |NLSLGSPSPSATLEQAVNSATSRGVLVVAASGNSGAGSISYPARYANAMAVGATDQNNNR|
+         PHD |EEE      HHHHHHHHHHHH   EEEEEEE              EEEEEEEEE      |
+         Rel |971389997599999999994598399998549999964798643158999985578562|
+ detail:
+         prH-|000000001799999999986200000000000000022100121110000000000221
+         prE-|884300000000000000000001699998720000000000012468999987210003
+         prL-|014589998200000000003698300000269999876888765321000012788675
+ subset: SUB |EE..LLLLLHHHHHHHHHHH.LLL.EEEEEE.LLLLLL.LLLL...EEEEEEEELLLLL.|
+
+
+              8...,....19...,....20...,....21...,....22...,....23...,....2
+         AA  |ASFSQYGAGLDIVAPGVNVQSTYPGSTYASLNGTSMATPHVAGAAALVKQKNPSWSNVQI|
+         PHD |EEEE    EEEEE     EEEE    EEEEE      HHHHHHHHHHHHHH     HHHH|
+         Rel |044249954899669943597426864776424555148999999989985998892899|
+ detail:
+         prH-|000000000000000000000000000000000111468988889988886001105899
+         prE-|466520026899720033788642016787643211100000000010000000000000
+         prL-|422468972100279966201357873112356666420000000000012888894100
+ subset: SUB |.....LLL.EEEELLL..EEE..LLL.EEE...LLL..HHHHHHHHHHHHHLLLLL.HHH|
+
+
+              4...,....25...,....26...,....27...,....28...,....29...,....3
+         AA  |RNHLKNTATSLGSTNLYGSGLVNAEAATR|
+         PHD |HHHHHHHHHH            E      |
+         Rel |99999973318989786773112221389
+ detail:
+         prH-|99999976651010111000001344300
+         prE-|00000000000000001113445200000
+         prL-|00000013348989887776543454589
+ subset: SUB |HHHHHHH...LLLLLLLLL........LL|
+
+
+*                                                                              *
+*                                                                              *
+********************************************************************************
+*                                                                              *
+*                                                                              *
+END
